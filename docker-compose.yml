@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  mongo:
+    image: mongo
+
+  bash: &default
+    build: .
+    depends_on: [mongo]
+    image: dannyben/alpine-ruby-mongo
